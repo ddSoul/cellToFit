@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cellToFit/Classes/Controllers/ViewController.m"
-            timestampString = "492932019.118719"
+            timestampString = "492935474.768423"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "-loadMore"
             landmarkType = "5">
          </BreakpointContent>

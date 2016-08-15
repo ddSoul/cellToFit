@@ -35,6 +35,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.edgesForExtendedLayout = NO;
     self.title = @"Demo";
+    self.page = 1;
     [self requestListofPage:@"1"];
     [self createTableView];
 
@@ -98,6 +99,7 @@
 
 - (void)refresh
 {
+    self.page = 1;
     [ProgressHUD showStatus];
     [self.tableView.header beginRefreshing];
     self.allMutableArray = @[].mutableCopy;
@@ -125,7 +127,6 @@
 {
     CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CustomCell" forIndexPath:indexPath];
     cell.model = self.allMutableArray[indexPath.row];
-    self.page += (indexPath.row+1)/20;
     return cell;
 }
 
