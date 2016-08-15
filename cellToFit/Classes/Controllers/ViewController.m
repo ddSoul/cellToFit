@@ -33,10 +33,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    self.edgesForExtendedLayout = NO;
     self.title = @"Demo";
-    [self createTableView];
     [self requestListofPage:@"1"];
-    // Do any additional setup after loading the view, typically from a nib.
+    [self createTableView];
+
 }
 
 - (NSMutableArray *)allMutableArray
@@ -48,7 +49,7 @@
 }
 - (void)requestListofPage:(NSString *)page
 {
-    
+    [ProgressHUD showStatus];
     [AXHttpTool getCloudListParams:@{@"page":page} Succsee:^(id responseObject){
         [ProgressHUD statusDismiss];
         [self.tableView.header endRefreshing];
@@ -58,7 +59,9 @@
         for (NSDictionary *value in jkModel.contentlist) {
             [self.allMutableArray addObject:value];
         }
+        
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [ProgressHUD statusDismiss];
             [self.tableView reloadData];
         });
     }failure:^(NSError *error){
@@ -79,19 +82,24 @@
         make.top.left.right.bottom.mas_equalTo(0);
     }];
     
-    [self.tableView addGifHeaderWithRefreshingTarget:self refreshingAction:@selector(refresh)];
-    [self.tableView addGifFooterWithRefreshingTarget:self refreshingAction:@selector(loadMore)];
+    [self.tableView addLegendHeaderWithRefreshingTarget:self refreshingAction:@selector(refresh)];
+    [self.tableView addLegendFooterWithRefreshingTarget:self refreshingAction:@selector(loadMore)];
+
 }
 - (void)loadMore
 {
     [ProgressHUD showStatus];
     NSString *pageStr = [NSString stringWithFormat:@"%ld",(self.page+1)];
-    [self requestListofPage:pageStr];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.tableView.footer beginRefreshing];
+        [self requestListofPage:pageStr];
+    });
 }
 
 - (void)refresh
 {
     [ProgressHUD showStatus];
+    [self.tableView.header beginRefreshing];
     self.allMutableArray = @[].mutableCopy;
     [self requestListofPage:@"1"];
 }
@@ -99,7 +107,6 @@
 #pragma mark tableviewDelegate
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    
     return self.allMutableArray.count;
     
 }
@@ -109,6 +116,7 @@
     return [tableView fd_heightForCellWithIdentifier:@"CustomCell" configuration:^(CustomTableViewCell *cell) {
         
         cell.model = self.allMutableArray[indexPath.row];
+        
     }];
     
 }

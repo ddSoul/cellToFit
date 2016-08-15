@@ -18,6 +18,7 @@
 @interface CustomTableViewCell ()
 
 @property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UIImageView *baseIamgeView;
 
 @end
 
@@ -38,11 +39,14 @@
  */
 - (void)createControls
 {
+    self.baseIamgeView = [[UIImageView alloc] init];
+    self.baseIamgeView.image = [UIImage imageNamed:@"chat"];
+    [self.contentView addSubview:self.baseIamgeView];
+    
     self.titleLabel = [[UILabel alloc] init];
     self.titleLabel.font = [UIFont systemFontOfSize:50*view_scal];
-    self.titleLabel.backgroundColor = [UIColor redColor];
     self.titleLabel.numberOfLines = 0;
-    [self.contentView addSubview:self.titleLabel];
+    [self.baseIamgeView addSubview:self.titleLabel];
     
 }
 
@@ -55,6 +59,12 @@
 - (void)setAutoLayout
 {
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make){
+        make.left.mas_equalTo(self.baseIamgeView).offset(100*view_scal);
+        make.top.mas_equalTo(self.baseIamgeView).offset(60*view_scal);
+        make.right.bottom.mas_equalTo(self.baseIamgeView).offset(-60*view_scal);
+    }];
+//
+    [self.baseIamgeView mas_makeConstraints:^(MASConstraintMaker *make){
         make.top.left.mas_equalTo(60*view_scal);
         make.right.bottom.mas_equalTo(-60*view_scal);
     }];
