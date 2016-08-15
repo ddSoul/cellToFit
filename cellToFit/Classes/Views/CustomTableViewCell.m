@@ -31,6 +31,7 @@
     if (self)
     {
         [self createControls];
+        [self setAutoLayout];
     }
     return self;
 }
@@ -53,7 +54,6 @@
 - (void)setModel:(Contentlist *)model
 {
     self.titleLabel.text = model.text;
-    [self setAutoLayout];
 }
 
 - (void)setAutoLayout
@@ -63,7 +63,7 @@
         make.top.mas_equalTo(self.baseIamgeView).offset(60*view_scal);
         make.right.bottom.mas_equalTo(self.baseIamgeView).offset(-60*view_scal);
     }];
-//
+
     [self.baseIamgeView mas_makeConstraints:^(MASConstraintMaker *make){
         make.top.left.mas_equalTo(60*view_scal);
         make.right.bottom.mas_equalTo(-60*view_scal);

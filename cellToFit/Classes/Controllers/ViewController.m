@@ -61,10 +61,9 @@
             [self.allMutableArray addObject:value];
         }
         
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [ProgressHUD statusDismiss];
             [self.tableView reloadData];
-        });
+
     }failure:^(NSError *error){
         NSLog(@"%@",error);
     }];
@@ -76,6 +75,7 @@
     self.tableView.backgroundColor = [UIColor whiteColor];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.showsVerticalScrollIndicator = NO;
     [self.tableView registerClass:[CustomTableViewCell class] forCellReuseIdentifier:@"CustomCell"];
     [self.view addSubview:self.tableView];
     
@@ -91,7 +91,7 @@
 {
     [ProgressHUD showStatus];
     NSString *pageStr = [NSString stringWithFormat:@"%ld",(self.page+1)];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.tableView.footer beginRefreshing];
         [self requestListofPage:pageStr];
     });
@@ -115,16 +115,21 @@
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
+    
     return [tableView fd_heightForCellWithIdentifier:@"CustomCell" configuration:^(CustomTableViewCell *cell) {
         
         cell.model = self.allMutableArray[indexPath.row];
         
     }];
     
+
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CustomCell" forIndexPath:indexPath];
     cell.model = self.allMutableArray[indexPath.row];
     return cell;

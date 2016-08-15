@@ -690,6 +690,7 @@
 				TargetAttributes = {
 					EEB0FBFD1D5DB690000C8524 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 3T7PG2G445;
 					};
 					EEB0FC161D5DB690000C8524 = {
 						CreatedOnToolsVersion = 7.2;
@@ -939,6 +940,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = cellToFit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dxl.cellToFit;
@@ -950,6 +952,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = cellToFit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dxl.cellToFit;
@@ -1024,6 +1027,7 @@
 				EEB0FC2D1D5DB690000C8524 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EEB0FC2E1D5DB690000C8524 /* Build configuration list for PBXNativeTarget "cellToFitTests" */ = {
 			isa = XCConfigurationList;
@@ -1032,6 +1036,7 @@
 				EEB0FC301D5DB690000C8524 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EEB0FC311D5DB690000C8524 /* Build configuration list for PBXNativeTarget "cellToFitUITests" */ = {
 			isa = XCConfigurationList;
@@ -1040,6 +1045,7 @@
 				EEB0FC331D5DB690000C8524 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
