@@ -1,12 +1,12 @@
 //
-//  ViewController.m
+//  JokListViewController.m
 //  cellToFit
 //
-//  Created by 邓西亮 on 16/8/12.
+//  Created by 邓西亮 on 16/8/16.
 //  Copyright © 2016年 dxl. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "JokListViewController.h"
 #import "JokModel.h"
 #import "CustomTableViewCell.h"
 #import "AXHttpTool.h"
@@ -15,20 +15,22 @@
 #import "ProgressHUD.h"
 #import "Masonry.h"
 #import "UITableView+FDTemplateLayoutCell.h"
+#import "XLHeader.h"
 
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
 #define view_scal (ScreenWidth/1242)
 
-@interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface JokListViewController ()
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *allMutableArray;
 @property (nonatomic, assign) NSInteger page;
 
+
 @end
 
-@implementation ViewController
+@implementation JokListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,7 +40,7 @@
     self.page = 1;
     [self requestListofPage:@"1"];
     [self createTableView];
-
+    
 }
 
 - (NSMutableArray *)allMutableArray
@@ -53,17 +55,17 @@
     [ProgressHUD showStatus];
     [AXHttpTool getCloudListParams:@{@"page":page} Succsee:^(id responseObject){
         [ProgressHUD statusDismiss];
-        [self.tableView.header endRefreshing];
-        [self.tableView.footer endRefreshing];
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
         JokModel *jkModel =
         [JokModel mj_objectWithKeyValues:responseObject[@"showapi_res_body"]];
         for (NSDictionary *value in jkModel.contentlist) {
             [self.allMutableArray addObject:value];
         }
         
-            [ProgressHUD statusDismiss];
-            [self.tableView reloadData];
-
+        [ProgressHUD statusDismiss];
+        [self.tableView reloadData];
+        
     }failure:^(NSError *error){
         NSLog(@"%@",error);
     }];
@@ -83,16 +85,22 @@
         make.top.left.right.bottom.mas_equalTo(0);
     }];
     
-    [self.tableView addLegendHeaderWithRefreshingTarget:self refreshingAction:@selector(refresh)];
-    [self.tableView addLegendFooterWithRefreshingTarget:self refreshingAction:@selector(loadMore)];
-
+    //MJRefresh自定义刷新控件
+    __weak typeof(self) weakSelf = self;
+    self.tableView.mj_header = [XLHeader headerWithRefreshingBlock:^{
+        [weakSelf refresh];
+    }];
+    //默认【上拉加载】
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMore)];
+    
+    
 }
 - (void)loadMore
 {
     [ProgressHUD showStatus];
     NSString *pageStr = [NSString stringWithFormat:@"%ld",(self.page+1)];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.tableView.footer beginRefreshing];
+        [self.tableView.mj_footer beginRefreshing];
         [self requestListofPage:pageStr];
     });
 }
@@ -101,7 +109,7 @@
 {
     self.page = 1;
     [ProgressHUD showStatus];
-    [self.tableView.header beginRefreshing];
+    [self.tableView.mj_header beginRefreshing];
     self.allMutableArray = @[].mutableCopy;
     [self requestListofPage:@"1"];
 }
@@ -115,15 +123,11 @@
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
-    
     return [tableView fd_heightForCellWithIdentifier:@"CustomCell" configuration:^(CustomTableViewCell *cell) {
         
         cell.model = self.allMutableArray[indexPath.row];
         
     }];
-    
-
     
 }
 
