@@ -21,7 +21,7 @@
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
 #define view_scal (ScreenWidth/1242)
 
-@interface JokListViewController ()
+@interface JokListViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *allMutableArray;

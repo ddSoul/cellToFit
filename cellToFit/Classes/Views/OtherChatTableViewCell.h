@@ -1,5 +1,5 @@
 //
-//  ChatTableViewCell.h
+//  OtherChatTableViewCell.h
 //  cellToFit
 //
 //  Created by 邓西亮 on 16/8/16.
@@ -10,7 +10,7 @@
 
 @class ChatDataSoure;
 
-@interface ChatTableViewCell :UITableViewCell
+@interface OtherChatTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) ChatDataSoure *model;
 

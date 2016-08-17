@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cellToFit/Classes/Controllers/JokListViewController.m"
-            timestampString = "493016262.836883"
+            timestampString = "493037090.379937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "110"
@@ -54,48 +54,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "cellToFit/Classes/Views/ChatTableViewCell.m"
-            timestampString = "493018878.117993"
+            filePath = "cellToFit/Classes/Controllers/ChatViewController.m"
+            timestampString = "493091243.901043"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "-setModel:"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "-refresh"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cellToFit/Classes/Views/ChatTableViewCell.m"
-            timestampString = "493018879.190348"
+            timestampString = "493031578.936647"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "-setModel:"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "-createControls"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cellToFit/Classes/Views/MienChatView.m"
-            timestampString = "493025279.282698"
+            timestampString = "493031582.576224"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "-setModel:"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "-createControls"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -105,13 +105,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "cellToFit/Classes/Controllers/ChatViewController.m"
-            timestampString = "493027844.1783"
+            filePath = "cellToFit/Classes/Views/OtherChatView.m"
+            timestampString = "493031587.545031"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "-loadMore"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "-createControls"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -121,13 +121,125 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "cellToFit/Classes/Controllers/ChatViewController.m"
-            timestampString = "493028002.637345"
+            filePath = "cellToFit/Classes/Views/OtherChatView.m"
+            timestampString = "493031589.585505"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
-            landmarkName = "-refresh"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "-setAutoLayout"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[OtherChatView setAutoLayout]"
+                  moduleName = "cellToFit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dengxiliang/Desktop/cellToFit/cellToFit/Classes/Views/OtherChatView.m"
+                  timestampString = "493089052.591543"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__30-[OtherChatView setAutoLayout]_block_invoke"
+                  moduleName = "cellToFit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dengxiliang/Desktop/cellToFit/cellToFit/Classes/Views/OtherChatView.m"
+                  timestampString = "493089052.591672"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "39">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cellToFit/Classes/Views/MienChatView.m"
+            timestampString = "493031592.825022"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "-setAutoLayout"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MienChatView setAutoLayout]"
+                  moduleName = "cellToFit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dengxiliang/Desktop/cellToFit/cellToFit/Classes/Views/MienChatView.m"
+                  timestampString = "493089052.592364"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__29-[MienChatView setAutoLayout]_block_invoke"
+                  moduleName = "cellToFit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dengxiliang/Desktop/cellToFit/cellToFit/Classes/Views/MienChatView.m"
+                  timestampString = "493089052.592495"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "39">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cellToFit/Classes/Views/MineChatTableViewCell.m"
+            timestampString = "493035391.856784"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "-createControls"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cellToFit/Classes/Views/FootToolViews.m"
+            timestampString = "493090047.877672"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "-initWithFrame:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

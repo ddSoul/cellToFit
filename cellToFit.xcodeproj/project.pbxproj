@@ -36,6 +36,9 @@
 		EE40ECC01D62D67F00CE7A0B /* MienChatView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE40ECBF1D62D67F00CE7A0B /* MienChatView.m */; };
 		EE40ECC31D62D68E00CE7A0B /* OtherChatView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE40ECC21D62D68E00CE7A0B /* OtherChatView.m */; };
 		EE40ECC61D62D6F700CE7A0B /* ChatDataSoure.m in Sources */ = {isa = PBXBuildFile; fileRef = EE40ECC51D62D6F700CE7A0B /* ChatDataSoure.m */; };
+		EE40ECC91D63159200CE7A0B /* OtherChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE40ECC81D63159200CE7A0B /* OtherChatTableViewCell.m */; };
+		EE40ECCC1D6315E500CE7A0B /* MineChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE40ECCB1D6315E500CE7A0B /* MineChatTableViewCell.m */; };
+		EE972E921D634CBE0050AD92 /* FootToolViews.m in Sources */ = {isa = PBXBuildFile; fileRef = EE972E911D634CBE0050AD92 /* FootToolViews.m */; };
 		EEB0FC031D5DB690000C8524 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB0FC021D5DB690000C8524 /* main.m */; };
 		EEB0FC061D5DB690000C8524 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB0FC051D5DB690000C8524 /* AppDelegate.m */; };
 		EEB0FC0E1D5DB690000C8524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEB0FC0D1D5DB690000C8524 /* Assets.xcassets */; };
@@ -172,6 +175,12 @@
 		EE40ECC21D62D68E00CE7A0B /* OtherChatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherChatView.m; sourceTree = "<group>"; };
 		EE40ECC41D62D6F700CE7A0B /* ChatDataSoure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDataSoure.h; sourceTree = "<group>"; };
 		EE40ECC51D62D6F700CE7A0B /* ChatDataSoure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDataSoure.m; sourceTree = "<group>"; };
+		EE40ECC71D63159200CE7A0B /* OtherChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherChatTableViewCell.h; sourceTree = "<group>"; };
+		EE40ECC81D63159200CE7A0B /* OtherChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherChatTableViewCell.m; sourceTree = "<group>"; };
+		EE40ECCA1D6315E500CE7A0B /* MineChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineChatTableViewCell.h; sourceTree = "<group>"; };
+		EE40ECCB1D6315E500CE7A0B /* MineChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineChatTableViewCell.m; sourceTree = "<group>"; };
+		EE972E901D634CBE0050AD92 /* FootToolViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootToolViews.h; sourceTree = "<group>"; };
+		EE972E911D634CBE0050AD92 /* FootToolViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootToolViews.m; sourceTree = "<group>"; };
 		EEB0FBFE1D5DB690000C8524 /* cellToFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cellToFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB0FC021D5DB690000C8524 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EEB0FC041D5DB690000C8524 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -526,6 +535,12 @@
 				EE40ECBF1D62D67F00CE7A0B /* MienChatView.m */,
 				EE40ECC11D62D68E00CE7A0B /* OtherChatView.h */,
 				EE40ECC21D62D68E00CE7A0B /* OtherChatView.m */,
+				EE40ECC71D63159200CE7A0B /* OtherChatTableViewCell.h */,
+				EE40ECC81D63159200CE7A0B /* OtherChatTableViewCell.m */,
+				EE40ECCA1D6315E500CE7A0B /* MineChatTableViewCell.h */,
+				EE40ECCB1D6315E500CE7A0B /* MineChatTableViewCell.m */,
+				EE972E901D634CBE0050AD92 /* FootToolViews.h */,
+				EE972E911D634CBE0050AD92 /* FootToolViews.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -888,6 +903,7 @@
 				EEB0FCB61D5DB868000C8524 /* AFAutoPurgingImageCache.m in Sources */,
 				EE40ECA31D62AA9B00CE7A0B /* MJRefreshStateHeader.m in Sources */,
 				EEB0FC061D5DB690000C8524 /* AppDelegate.m in Sources */,
+				EE40ECCC1D6315E500CE7A0B /* MineChatTableViewCell.m in Sources */,
 				EEB0FCD61D5DB868000C8524 /* NSObject+MJKeyValue.m in Sources */,
 				EEB0FCD01D5DB868000C8524 /* MJFoundation.m in Sources */,
 				EEB0FCBA1D5DB868000C8524 /* UIButton+AFNetworking.m in Sources */,
@@ -900,6 +916,7 @@
 				EE40ECA81D62AA9B00CE7A0B /* UIScrollView+MJRefresh.m in Sources */,
 				EEB0FCE91D5DBA46000C8524 /* UILabel+sizeTofitWdthAndHeigh.m in Sources */,
 				EE40ECC61D62D6F700CE7A0B /* ChatDataSoure.m in Sources */,
+				EE40ECC91D63159200CE7A0B /* OtherChatTableViewCell.m in Sources */,
 				EEB0FCC11D5DB868000C8524 /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				EEB0FCC91D5DB868000C8524 /* MASViewConstraint.m in Sources */,
 				EEB0FCCE1D5DB868000C8524 /* README.md in Sources */,
@@ -922,6 +939,7 @@
 				EEB0FCCB1D5DB868000C8524 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				EEB0FCC21D5DB868000C8524 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */,
 				EEB0FCE61D5DB97B000C8524 /* CustomTableViewCell.m in Sources */,
+				EE972E921D634CBE0050AD92 /* FootToolViews.m in Sources */,
 				EEB0FCBF1D5DB868000C8524 /* UITableView+FDIndexPathHeightCache.m in Sources */,
 				EEB0FCD41D5DB868000C8524 /* NSObject+MJClass.m in Sources */,
 				EE40ECAC1D62B02000CE7A0B /* XLHeader.m in Sources */,

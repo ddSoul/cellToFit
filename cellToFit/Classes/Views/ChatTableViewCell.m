@@ -37,12 +37,15 @@
 - (void)createControls
 {
     self.mineChatView = [[MienChatView alloc] init];
+//    [self.contentView addSubview:self.mineChatView];
     self.otherChatView = [[OtherChatView alloc] init];
+//    [self.contentView addSubview:self.otherChatView];
     
 }
 
 - (void)setModel:(ChatDataSoure *)model
 {
+//    self.mineChatView.model = model;
     if ([model.userID isEqualToString:@"1"]) {
         self.mineChatView.model = model;
         [self.contentView addSubview:self.mineChatView];
