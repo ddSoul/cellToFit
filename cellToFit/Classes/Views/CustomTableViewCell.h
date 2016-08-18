@@ -11,6 +11,11 @@
 @class Contentlist;
 @interface CustomTableViewCell : UITableViewCell
 
-@property (nonatomic, strong) Contentlist *model;
+/**
+ *  评论按钮的block
+ */
+@property (nonatomic, copy)void(^CommentBtnClickBlock)(UIButton *commentBtn,NSIndexPath * indexPath);
+
+- (void)configeModel:(Contentlist *)model indexPath:(NSIndexPath *)indexpath;
 
 @end

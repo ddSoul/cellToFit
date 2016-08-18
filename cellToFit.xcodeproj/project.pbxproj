@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE0C52761D6416DA0035C50F /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0C52751D6416DA0035C50F /* UIView+Extension.m */; };
 		EE40EC961D62AA9B00CE7A0B /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = EE40EC6A1D62AA9B00CE7A0B /* MJRefreshAutoFooter.m */; };
 		EE40EC971D62AA9B00CE7A0B /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = EE40EC6C1D62AA9B00CE7A0B /* MJRefreshBackFooter.m */; };
 		EE40EC981D62AA9B00CE7A0B /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = EE40EC6E1D62AA9B00CE7A0B /* MJRefreshComponent.m */; };
@@ -98,6 +99,7 @@
 		EEB0FCE31D5DB95E000C8524 /* JokModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB0FCE21D5DB95E000C8524 /* JokModel.m */; };
 		EEB0FCE61D5DB97B000C8524 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB0FCE51D5DB97B000C8524 /* CustomTableViewCell.m */; };
 		EEB0FCE91D5DBA46000C8524 /* UILabel+sizeTofitWdthAndHeigh.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB0FCE81D5DBA46000C8524 /* UILabel+sizeTofitWdthAndHeigh.m */; };
+		EED618E01D6588AE00802A65 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EED618DF1D6588AE00802A65 /* SearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +120,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE0C52741D6416DA0035C50F /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		EE0C52751D6416DA0035C50F /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		EE40EC691D62AA9B00CE7A0B /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		EE40EC6A1D62AA9B00CE7A0B /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		EE40EC6B1D62AA9B00CE7A0B /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
@@ -303,6 +307,8 @@
 		EEB0FCE51D5DB97B000C8524 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		EEB0FCE71D5DBA46000C8524 /* UILabel+sizeTofitWdthAndHeigh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+sizeTofitWdthAndHeigh.h"; sourceTree = "<group>"; };
 		EEB0FCE81D5DBA46000C8524 /* UILabel+sizeTofitWdthAndHeigh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+sizeTofitWdthAndHeigh.m"; sourceTree = "<group>"; };
+		EED618DE1D6588AE00802A65 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		EED618DF1D6588AE00802A65 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +336,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE0C52731D6416DA0035C50F /* Categray */ = {
+			isa = PBXGroup;
+			children = (
+				EE0C52741D6416DA0035C50F /* UIView+Extension.h */,
+				EE0C52751D6416DA0035C50F /* UIView+Extension.m */,
+			);
+			name = Categray;
+			path = cellToFit/Categray;
+			sourceTree = "<group>";
+		};
 		EE40EC671D62AA9B00CE7A0B /* MJRefresh */ = {
 			isa = PBXGroup;
 			children = (
@@ -429,6 +445,7 @@
 			isa = PBXGroup;
 			children = (
 				EEB0FC341D5DB868000C8524 /* Classes */,
+				EE0C52731D6416DA0035C50F /* Categray */,
 				EEB0FC3A1D5DB868000C8524 /* Thirds */,
 				EEB0FCA61D5DB868000C8524 /* Tools */,
 				EEB0FC001D5DB690000C8524 /* cellToFit */,
@@ -507,6 +524,8 @@
 				EE40ECB61D62D1AA00CE7A0B /* ChatViewController.m */,
 				EE40ECB81D62D1EC00CE7A0B /* JokListViewController.h */,
 				EE40ECB91D62D1EC00CE7A0B /* JokListViewController.m */,
+				EED618DE1D6588AE00802A65 /* SearchViewController.h */,
+				EED618DF1D6588AE00802A65 /* SearchViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -909,6 +928,7 @@
 				EEB0FCBA1D5DB868000C8524 /* UIButton+AFNetworking.m in Sources */,
 				EEB0FCD51D5DB868000C8524 /* NSObject+MJCoding.m in Sources */,
 				EEB0FCB91D5DB868000C8524 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				EED618E01D6588AE00802A65 /* SearchViewController.m in Sources */,
 				EEB0FCAE1D5DB868000C8524 /* AFHTTPSessionManager.m in Sources */,
 				EE40ECB31D62D19000CE7A0B /* HomeViewController.m in Sources */,
 				EE40ECA91D62AA9B00CE7A0B /* UIView+MJExtension.m in Sources */,
@@ -929,6 +949,7 @@
 				EE40ECA11D62AA9B00CE7A0B /* MJRefreshGifHeader.m in Sources */,
 				EE40EC9A1D62AA9B00CE7A0B /* MJRefreshHeader.m in Sources */,
 				EE40ECB71D62D1AA00CE7A0B /* ChatViewController.m in Sources */,
+				EE0C52761D6416DA0035C50F /* UIView+Extension.m in Sources */,
 				EE40ECBD1D62D5E800CE7A0B /* ChatTableViewCell.m in Sources */,
 				EE40ECA71D62AA9B00CE7A0B /* UIScrollView+MJExtension.m in Sources */,
 				EEB0FCC41D5DB868000C8524 /* MASCompositeConstraint.m in Sources */,

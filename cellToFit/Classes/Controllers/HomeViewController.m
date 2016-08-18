@@ -10,6 +10,8 @@
 #import "JokListViewController.h"
 #import "ProgressHUD.h"
 #import "ChatViewController.h"
+#import "SearchViewController.h"
+
 
 @interface HomeViewController ()
 - (IBAction)jokButton:(UIButton *)sender;
@@ -38,13 +40,15 @@
 
 - (IBAction)chatButton:(UIButton *)sender {
     
-    ChatViewController *push = [[ChatViewController alloc] init];
+    SearchViewController *push = [[SearchViewController alloc] init];
     [self.navigationController pushViewController:push animated:YES];
 //    [ProgressHUD showSuccessWithString:@"有待完善"];
     
 }
 
 - (IBAction)otherButton:(UIButton *)sender {
-    [ProgressHUD showSuccessWithString:@"有待完善"];
+//    [ProgressHUD showSuccessWithString:@"有待完善"];
+    ChatViewController *push = [[ChatViewController alloc] init];
+    [self.navigationController pushViewController:push animated:YES];
 }
 @end

@@ -19,6 +19,8 @@
 - (void)keyBoardDismiss;
 //输入框高度变化
 - (void)inputTextViewHeightChange;
+//换头像
+- (void)changeChatObj;
 
 @end
 

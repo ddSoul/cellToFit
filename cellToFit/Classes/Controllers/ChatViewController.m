@@ -17,6 +17,9 @@
 #import "MJRefresh.h"
 #import "XLHeader.h"
 #import "UITableView+FDTemplateLayoutCell.h"
+#import "UIView+Extension.h"
+#define TabHeightDefult (ScreenHeight-64-200*view_scal)
+#define k_HeaderImageViewTag (99)
 
 @interface ChatViewController ()<UITableViewDataSource,UITableViewDelegate,UITextViewDelegate,senderMessageDelegate>
 
@@ -24,6 +27,7 @@
 @property (nonatomic, strong) NSMutableArray *allMutableArray;
 @property (nonatomic, assign) CGFloat textViewHeight;
 @property (nonatomic, strong) FootToolViews *foottoolViews;
+@property (nonatomic, assign) BOOL chatObjBool;
 
 @end
 
@@ -55,6 +59,9 @@
     [self createTableView];
     [self requestList];
     [self.view addSubview:self.foottoolViews];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self setTableVIewToBottom];
+    });
 }
 
 - (void)createTableView
@@ -70,7 +77,8 @@
     [self.view addSubview:self.tableView];
     
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make){
-        make.top.left.right.bottom.mas_equalTo(0);
+        make.top.left.right.mas_equalTo(0);
+        make.bottom.mas_equalTo(-180*view_scal);
     }];
     
     //MJRefresh自定义刷新控件
@@ -186,11 +194,14 @@
 #pragma mark FootToolViews DelegateMethod
 - (void)keyBoardDismiss
 {
-    [self.tableView setContentOffset:CGPointMake(0, 1000*view_scal) animated:YES];
+    
+    self.tableView.height = TabHeightDefult;
+    [self setTableVIewToBottom];
 }
 - (void)keyBoardShow:(CGFloat)keyboardHeight
 {
-    [self.tableView setContentOffset:CGPointMake(0, 2000*view_scal) animated:YES];
+    self.tableView.height = TabHeightDefult - keyboardHeight;
+    [self setTableVIewToBottom];
 }
 - (void)inputTextViewHeightChange
 {
@@ -198,17 +209,41 @@
 }
 - (void)senderMessage
 {
-    [self.tableView setContentOffset:CGPointMake(0, 3000*view_scal) animated:YES];
-    NSLog(@"-________%@",self.foottoolViews.inputTextView.text);
-    [ProgressHUD showStatus];
-    [self.tableView.mj_footer beginRefreshing];
-    NSDictionary *tempDic = @{@"headerImageUrl":@"55",@"content":self.foottoolViews.inputTextView.text,@"userID":@"2",@"userNickName":@"55"};
+    
+    NSDictionary *tempDic;
+    if (self.chatObjBool) {
+        tempDic = @{@"headerImageUrl":@"55",@"content":self.foottoolViews.inputTextView.text,@"userID":@"2",@"userNickName":@"55"};
+    }else{
+        tempDic = @{@"headerImageUrl":@"55",@"content":self.foottoolViews.inputTextView.text,@"userID":@"1",@"userNickName":@"55"};
+    }
+//    NSDictionary *tempDic = @{@"headerImageUrl":@"55",@"content":self.foottoolViews.inputTextView.text,@"userID":@"2",@"userNickName":@"55"};
     ChatDataSoure *chatModel = [ChatDataSoure mj_objectWithKeyValues:tempDic];
     [self.allMutableArray insertObject:chatModel atIndex:self.allMutableArray.count];
-    [self.tableView.mj_footer endRefreshing];
     [self.tableView reloadData];
-    [ProgressHUD statusDismiss];
     self.foottoolViews.inputTextView.text = @"";
+    self.tableView.height = 850*view_scal;
+    [self setTableVIewToBottom];
+
+}
+
+- (void)changeChatObj
+{
+    [ProgressHUD showSuccessWithString:@"切换成功"];
+    UIImageView *tempImageView = [self.view viewWithTag:k_HeaderImageViewTag];
+    if (!self.chatObjBool) {
+        tempImageView.image = [UIImage imageNamed:@"you"];
+        self.chatObjBool = YES;
+    }else{
+        tempImageView.image = [UIImage imageNamed:@"me"];
+        self.chatObjBool = NO;
+    }
+ 
+}
+
+- (void)setTableVIewToBottom
+{
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:(self.allMutableArray.count-1) inSection:0];
+    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionNone animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -125,7 +125,7 @@
 {
     return [tableView fd_heightForCellWithIdentifier:@"CustomCell" configuration:^(CustomTableViewCell *cell) {
         
-        cell.model = self.allMutableArray[indexPath.row];
+        [cell configeModel:self.allMutableArray[indexPath.row] indexPath:indexPath];
         
     }];
     
@@ -135,7 +135,14 @@
 {
     
     CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CustomCell" forIndexPath:indexPath];
-    cell.model = self.allMutableArray[indexPath.row];
+    [cell configeModel:self.allMutableArray[indexPath.row] indexPath:indexPath];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.CommentBtnClickBlock = ^(UIButton *commentBtn,NSIndexPath * indexPath)
+    {
+        NSLog(@"___________=========%ld",(long)indexPath.row);
+
+    };
+
     return cell;
 }
 

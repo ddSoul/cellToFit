@@ -14,11 +14,14 @@
 #define TextViewHeightDefult (34.5)
 #define FootViewY (ScreenHeight-400*view_scal)
 #define FootViewHeightDefult (200*view_scal)
+#define k_HeaderImageViewTag (99)
 
 @interface FootToolViews ()<UITextViewDelegate>
 
 @property (nonatomic, assign) CGFloat keyBoardHeight;
 @property (nonatomic, assign) CGFloat textViewChangeHeight;
+@property (nonatomic, assign) BOOL defultBool;
+
 @end
 
 @implementation FootToolViews
@@ -48,7 +51,11 @@
         
         UIImageView *hearderImageView = [[UIImageView alloc] init];
         hearderImageView.image = [UIImage imageNamed:@"me"];
+        hearderImageView.tag = k_HeaderImageViewTag;
         [self addSubview:hearderImageView];
+        hearderImageView.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(headerTap)];
+        [hearderImageView addGestureRecognizer:tapGesture];
         
         UIButton *sendBtton = [UIButton buttonWithType:UIButtonTypeCustom];
         [sendBtton setBackgroundImage:[UIImage imageNamed:@"chat"] forState:UIControlStateNormal];
@@ -95,8 +102,14 @@
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 {
     CGSize myTextViewSize = [self.inputTextView sizeThatFits:CGSizeMake(self.inputTextView.frame.size.width, FLT_MAX)];
-
-    if (myTextViewSize.height != TextViewHeightDefult) {
+    
+    if (self.defultBool && (myTextViewSize.height == TextViewHeightDefult)) {
+        [self upLayout:myTextViewSize.height];
+        self.defultBool = NO;
+    }
+    
+    if (myTextViewSize.height != TextViewHeightDefult && (self.textViewChangeHeight != (myTextViewSize.height-TextViewHeightDefult))) {
+        self.defultBool = YES;
         [self upLayout:myTextViewSize.height];
         [self.delegate inputTextViewHeightChange];
     }
@@ -133,6 +146,11 @@
 {
     [self.delegate keyBoardDismiss];
     self.frame = CGRectMake(0, FootViewY-self.textViewChangeHeight, ScreenWidth, FootViewHeightDefult+self.textViewChangeHeight);
+}
+
+- (void)headerTap
+{
+    [self.delegate changeChatObj];
 }
 
 @end
