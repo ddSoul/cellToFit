@@ -78,7 +78,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.showsVerticalScrollIndicator = NO;
-    [self.tableView registerClass:[CustomTableViewCell class] forCellReuseIdentifier:@"CustomCell"];
+    [self.tableView registerClass:[CustomTableViewCell class] forCellReuseIdentifier:@"cell"];
     [self.view addSubview:self.tableView];
     
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make){
@@ -123,9 +123,9 @@
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [tableView fd_heightForCellWithIdentifier:@"CustomCell" configuration:^(CustomTableViewCell *cell) {
+    return [tableView fd_heightForCellWithIdentifier:@"cell" configuration:^(CustomTableViewCell *cell) {
         
-        [cell configeModel:self.allMutableArray[indexPath.row] indexPath:indexPath];
+        [cell setModel:self.allMutableArray[indexPath.row] indexPath:indexPath];
         
     }];
     
@@ -134,12 +134,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CustomCell" forIndexPath:indexPath];
-    [cell configeModel:self.allMutableArray[indexPath.row] indexPath:indexPath];
+    CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    [cell setModel:self.allMutableArray[indexPath.row] indexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.CommentBtnClickBlock = ^(UIButton *commentBtn,NSIndexPath * indexPath)
     {
-        NSLog(@"___________=========%ld",(long)indexPath.row);
+        NSLog(@"你点击的cell的index.row=%ld",(long)indexPath.row);
 
     };
 

@@ -67,11 +67,7 @@
 
 }
 
-//- (void)setModel:(Contentlist *)model
-//{
-//    self.titleLabel.text = model.text;
-//}
-- (void)configeModel:(Contentlist *)model indexPath:(NSIndexPath *)indexpath
+- (void)setModel:(Contentlist *)model indexPath:(NSIndexPath *)indexpath
 {
     self.indexPath = indexpath;
     self.titleLabel.text = model.text;

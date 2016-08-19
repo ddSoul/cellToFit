@@ -216,7 +216,7 @@
     }else{
         tempDic = @{@"headerImageUrl":@"55",@"content":self.foottoolViews.inputTextView.text,@"userID":@"1",@"userNickName":@"55"};
     }
-//    NSDictionary *tempDic = @{@"headerImageUrl":@"55",@"content":self.foottoolViews.inputTextView.text,@"userID":@"2",@"userNickName":@"55"};
+    
     ChatDataSoure *chatModel = [ChatDataSoure mj_objectWithKeyValues:tempDic];
     [self.allMutableArray insertObject:chatModel atIndex:self.allMutableArray.count];
     [self.tableView reloadData];

@@ -16,6 +16,6 @@
  */
 @property (nonatomic, copy)void(^CommentBtnClickBlock)(UIButton *commentBtn,NSIndexPath * indexPath);
 
-- (void)configeModel:(Contentlist *)model indexPath:(NSIndexPath *)indexpath;
+- (void)setModel:(Contentlist *)model indexPath:(NSIndexPath *)indexpath;
 
 @end

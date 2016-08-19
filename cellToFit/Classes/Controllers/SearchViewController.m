@@ -7,6 +7,7 @@
 //
 
 #import "SearchViewController.h"
+#import "XLDBManageer.h"
 
 @interface SearchViewController ()<UISearchBarDelegate>
 
@@ -16,7 +17,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self createSearchView];
+    [XLDBManageer saveUserName:@"hello" withUserId:@"1"];
     
+    
+    // Do any additional setup after loading the view.
+}
+- (void)createSearchView
+{
     UISearchBar *searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 40)];
     //设置提示文字
     searchBar.placeholder = @"搜索";
@@ -26,8 +34,7 @@
     searchBar.delegate = self;
     //添加到视图
     [self.view addSubview:searchBar];;
-    
-    // Do any additional setup after loading the view.
+
 }
 
 #pragma mark - UISearchBarDelegate

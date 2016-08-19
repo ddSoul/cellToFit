@@ -11,7 +11,7 @@
 #import "ProgressHUD.h"
 #import "ChatViewController.h"
 #import "SearchViewController.h"
-
+#import "XLDBManageer.h"
 
 @interface HomeViewController ()
 - (IBAction)jokButton:(UIButton *)sender;
@@ -24,6 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"________%@",[XLDBManageer getUserNamewithId:@"1"]);
     // Do any additional setup after loading the view from its nib.
 }
 
