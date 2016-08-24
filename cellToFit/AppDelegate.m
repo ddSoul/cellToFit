@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "HomeViewController.h"
 #import "XLDBManageer.h"
+#import "UserInfodbManager.h"
 
 @interface AppDelegate ()
 
@@ -25,6 +26,7 @@
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[HomeViewController alloc] init]];
     [self.window setRootViewController:nav];
     [XLDBManageer configeChatDateBase];
+    [UserInfodbManager configeChatDateBase];
     
     // Override point for customization after application launch.
     return YES;

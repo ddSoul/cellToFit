@@ -12,11 +12,13 @@
 #import "ChatViewController.h"
 #import "SearchViewController.h"
 #import "XLDBManageer.h"
+#import "InsertdbViewController.h"
 
 @interface HomeViewController ()
 - (IBAction)jokButton:(UIButton *)sender;
 - (IBAction)chatButton:(UIButton *)sender;
 - (IBAction)otherButton:(UIButton *)sender;
+- (IBAction)dbButton:(UIButton *)sender;
 
 @end
 
@@ -50,6 +52,11 @@
 - (IBAction)otherButton:(UIButton *)sender {
 //    [ProgressHUD showSuccessWithString:@"有待完善"];
     ChatViewController *push = [[ChatViewController alloc] init];
+    [self.navigationController pushViewController:push animated:YES];
+}
+
+- (IBAction)dbButton:(UIButton *)sender {
+    InsertdbViewController *push = [[InsertdbViewController alloc] init];
     [self.navigationController pushViewController:push animated:YES];
 }
 @end

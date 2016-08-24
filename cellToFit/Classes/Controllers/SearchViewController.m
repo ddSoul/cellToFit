@@ -8,8 +8,11 @@
 
 #import "SearchViewController.h"
 #import "XLDBManageer.h"
+#import "UserInfodbManager.h"
 
 @interface SearchViewController ()<UISearchBarDelegate>
+
+@property (nonatomic, strong)NSDictionary *dic;
 
 @end
 
@@ -18,21 +21,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self createSearchView];
-    [XLDBManageer saveUserName:@"hello" withUserId:@"1"];
+//    [XLDBManageer saveUserName:@"hello" withUserId:@"1"];
     
-    
-    // Do any additional setup after loading the view.
+    self.dic = [UserInfodbManager getUserNamewithId:@"xl_10"];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageWithData:self.dic[@"imageData"]]];
+    NSLog(@"_______%ld",(long)[UserInfodbManager getformData]);
 }
 - (void)createSearchView
 {
     UISearchBar *searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 40)];
-    //设置提示文字
     searchBar.placeholder = @"搜索";
-    //设置边框背景图片
     searchBar.backgroundImage = [UIImage imageNamed:@"searchBar_BG"];
-    //设置代理
     searchBar.delegate = self;
-    //添加到视图
     [self.view addSubview:searchBar];;
 
 }
@@ -45,8 +45,10 @@
 #pragma mark 搜索开始编辑
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
 {
-    searchBar.frame = CGRectMake(0, 22, self.view.frame.size.width, 40);
-    [self.navigationController.view addSubview: searchBar];
+    [UIView animateWithDuration:0.1f animations:^{
+         searchBar.frame = CGRectMake(0, 22, self.view.frame.size.width, 40);
+        [self.navigationController.view addSubview: searchBar];
+    }];
     //设置取消按钮样式
     //首先取出cancelBtn
     UIButton *cancelBtn = [searchBar valueForKey:@"cancelButton"];
@@ -60,10 +62,8 @@
 #pragma mark  编辑
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar
 {
-    
     //展示取消按钮
     searchBar.showsCancelButton = YES;
-    
     return YES;
 }
 #pragma mark  编辑

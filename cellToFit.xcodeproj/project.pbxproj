@@ -36,6 +36,10 @@
 		EE40ECC61D62D6F700CE7A0B /* ChatDataSoure.m in Sources */ = {isa = PBXBuildFile; fileRef = EE40ECC51D62D6F700CE7A0B /* ChatDataSoure.m */; };
 		EE40ECC91D63159200CE7A0B /* OtherChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE40ECC81D63159200CE7A0B /* OtherChatTableViewCell.m */; };
 		EE40ECCC1D6315E500CE7A0B /* MineChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE40ECCB1D6315E500CE7A0B /* MineChatTableViewCell.m */; };
+		EE963E581D6C378D00FE88DC /* UserInfodbManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE963E571D6C378D00FE88DC /* UserInfodbManager.m */; };
+		EE963E5C1D6C3DC100FE88DC /* InsertdbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE963E5A1D6C3DC100FE88DC /* InsertdbViewController.m */; };
+		EE963E5D1D6C3DC100FE88DC /* InsertdbViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE963E5B1D6C3DC100FE88DC /* InsertdbViewController.xib */; };
+		EE963E601D6C402C00FE88DC /* GetImageData.m in Sources */ = {isa = PBXBuildFile; fileRef = EE963E5F1D6C402C00FE88DC /* GetImageData.m */; };
 		EE972E921D634CBE0050AD92 /* FootToolViews.m in Sources */ = {isa = PBXBuildFile; fileRef = EE972E911D634CBE0050AD92 /* FootToolViews.m */; };
 		EEB0FC031D5DB690000C8524 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB0FC021D5DB690000C8524 /* main.m */; };
 		EEB0FC061D5DB690000C8524 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB0FC051D5DB690000C8524 /* AppDelegate.m */; };
@@ -181,6 +185,13 @@
 		EE40ECC81D63159200CE7A0B /* OtherChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherChatTableViewCell.m; sourceTree = "<group>"; };
 		EE40ECCA1D6315E500CE7A0B /* MineChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineChatTableViewCell.h; sourceTree = "<group>"; };
 		EE40ECCB1D6315E500CE7A0B /* MineChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineChatTableViewCell.m; sourceTree = "<group>"; };
+		EE963E561D6C378D00FE88DC /* UserInfodbManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfodbManager.h; sourceTree = "<group>"; };
+		EE963E571D6C378D00FE88DC /* UserInfodbManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfodbManager.m; sourceTree = "<group>"; };
+		EE963E591D6C3DC100FE88DC /* InsertdbViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsertdbViewController.h; sourceTree = "<group>"; };
+		EE963E5A1D6C3DC100FE88DC /* InsertdbViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsertdbViewController.m; sourceTree = "<group>"; };
+		EE963E5B1D6C3DC100FE88DC /* InsertdbViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InsertdbViewController.xib; sourceTree = "<group>"; };
+		EE963E5E1D6C402C00FE88DC /* GetImageData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetImageData.h; sourceTree = "<group>"; };
+		EE963E5F1D6C402C00FE88DC /* GetImageData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetImageData.m; sourceTree = "<group>"; };
 		EE972E901D634CBE0050AD92 /* FootToolViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootToolViews.h; sourceTree = "<group>"; };
 		EE972E911D634CBE0050AD92 /* FootToolViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootToolViews.m; sourceTree = "<group>"; };
 		EEB0FBFE1D5DB690000C8524 /* cellToFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cellToFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -540,6 +551,9 @@
 				EE40ECB91D62D1EC00CE7A0B /* JokListViewController.m */,
 				EED618DE1D6588AE00802A65 /* SearchViewController.h */,
 				EED618DF1D6588AE00802A65 /* SearchViewController.m */,
+				EE963E591D6C3DC100FE88DC /* InsertdbViewController.h */,
+				EE963E5A1D6C3DC100FE88DC /* InsertdbViewController.m */,
+				EE963E5B1D6C3DC100FE88DC /* InsertdbViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -755,6 +769,8 @@
 		EEB0FCA61D5DB868000C8524 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				EE963E5E1D6C402C00FE88DC /* GetImageData.h */,
+				EE963E5F1D6C402C00FE88DC /* GetImageData.m */,
 				EEB0FCE71D5DBA46000C8524 /* UILabel+sizeTofitWdthAndHeigh.h */,
 				EEB0FCE81D5DBA46000C8524 /* UILabel+sizeTofitWdthAndHeigh.m */,
 				EEB0FCA71D5DB868000C8524 /* AXHttpTool.h */,
@@ -765,6 +781,8 @@
 				EEB0FCAC1D5DB868000C8524 /* XLHttpTool.m */,
 				EED0B8EF1D66E49E003DC0BE /* XLDBManageer.h */,
 				EED0B8F01D66E49E003DC0BE /* XLDBManageer.m */,
+				EE963E561D6C378D00FE88DC /* UserInfodbManager.h */,
+				EE963E571D6C378D00FE88DC /* UserInfodbManager.m */,
 			);
 			name = Tools;
 			path = cellToFit/Tools;
@@ -897,6 +915,7 @@
 				EE40ECA41D62AA9B00CE7A0B /* MJRefresh.bundle in Resources */,
 				EEB0FCC31D5DB868000C8524 /* LICENSE in Resources */,
 				EEB0FCB41D5DB868000C8524 /* LICENSE in Resources */,
+				EE963E5D1D6C3DC100FE88DC /* InsertdbViewController.xib in Resources */,
 				EE40ECB41D62D19000CE7A0B /* HomeViewController.xib in Resources */,
 				EEB0FC0E1D5DB690000C8524 /* Assets.xcassets in Resources */,
 			);
@@ -933,6 +952,7 @@
 				EEB0FCE31D5DB95E000C8524 /* JokModel.m in Sources */,
 				EEB0FCE01D5DB868000C8524 /* XLHttpTool.m in Sources */,
 				EE40EC9D1D62AA9B00CE7A0B /* MJRefreshAutoStateFooter.m in Sources */,
+				EE963E581D6C378D00FE88DC /* UserInfodbManager.m in Sources */,
 				EEB0FCBB1D5DB868000C8524 /* UIImageView+AFNetworking.m in Sources */,
 				EEB0FCC81D5DB868000C8524 /* MASViewAttribute.m in Sources */,
 				EE40EC9E1D62AA9B00CE7A0B /* MJRefreshBackGifFooter.m in Sources */,
@@ -968,9 +988,11 @@
 				EE40ECC61D62D6F700CE7A0B /* ChatDataSoure.m in Sources */,
 				EE40ECC91D63159200CE7A0B /* OtherChatTableViewCell.m in Sources */,
 				EEB0FCC11D5DB868000C8524 /* UITableView+FDTemplateLayoutCell.m in Sources */,
+				EE963E601D6C402C00FE88DC /* GetImageData.m in Sources */,
 				EEB0FCC91D5DB868000C8524 /* MASViewConstraint.m in Sources */,
 				EEB0FCCE1D5DB868000C8524 /* README.md in Sources */,
 				EEB0FCCC1D5DB868000C8524 /* View+MASAdditions.m in Sources */,
+				EE963E5C1D6C3DC100FE88DC /* InsertdbViewController.m in Sources */,
 				EED0B9011D66E6D0003DC0BE /* FMDatabaseAdditions.m in Sources */,
 				EEB0FCC61D5DB868000C8524 /* MASConstraintMaker.m in Sources */,
 				EEB0FCBD1D5DB868000C8524 /* UIRefreshControl+AFNetworking.m in Sources */,

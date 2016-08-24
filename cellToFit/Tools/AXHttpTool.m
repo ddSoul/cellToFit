@@ -16,11 +16,13 @@
     NSString *urlStr = [NSString stringWithFormat:@"%@",@"http://apis.baidu.com/showapi_open_bus/showapi_joke/joke_text"];
     [XLHttpTool getWithUrl:urlStr
                     params:params
-                   success:^(id responseObject){
-                                    completion(responseObject);
-                                                }
-                   failure:^(NSError *error){
-                                    failure(error);
+                   success:^(id responseObject)
+    {
+                    completion(responseObject);
+    }
+                   failure:^(NSError *error)
+    {
+                    failure(error);
                                             }];
 }
 
