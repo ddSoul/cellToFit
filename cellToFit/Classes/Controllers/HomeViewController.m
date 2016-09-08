@@ -10,15 +10,15 @@
 #import "JokListViewController.h"
 #import "ProgressHUD.h"
 #import "ChatViewController.h"
-#import "SearchViewController.h"
-#import "XLDBManageer.h"
-#import "InsertdbViewController.h"
+
 
 @interface HomeViewController ()
 - (IBAction)jokButton:(UIButton *)sender;
 - (IBAction)chatButton:(UIButton *)sender;
 - (IBAction)otherButton:(UIButton *)sender;
 - (IBAction)dbButton:(UIButton *)sender;
+@property (nonatomic, strong) NSData *imageData;
+
 
 @end
 
@@ -26,7 +26,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"________%@",[XLDBManageer getUserNamewithId:@"1"]);
+
+    
+    
+    
+//    NSLog(@"________%@",[XLDBManageer getUserNamewithId:@"1"]);
+    
+//    [[NSCache shareManager] setObject:@"你查没打卡没电啦麽登陆" forKey:@"test"];
+    
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -43,20 +51,18 @@
 
 - (IBAction)chatButton:(UIButton *)sender {
     
-    SearchViewController *push = [[SearchViewController alloc] init];
+    ChatViewController *push = [[ChatViewController alloc] init];
     [self.navigationController pushViewController:push animated:YES];
 //    [ProgressHUD showSuccessWithString:@"有待完善"];
     
 }
 
 - (IBAction)otherButton:(UIButton *)sender {
-//    [ProgressHUD showSuccessWithString:@"有待完善"];
-    ChatViewController *push = [[ChatViewController alloc] init];
-    [self.navigationController pushViewController:push animated:YES];
+    [ProgressHUD showSuccessWithString:@"有待完善"];
+
 }
 
 - (IBAction)dbButton:(UIButton *)sender {
-    InsertdbViewController *push = [[InsertdbViewController alloc] init];
-    [self.navigationController pushViewController:push animated:YES];
+       [ProgressHUD showSuccessWithString:@"有待完善"];
 }
 @end

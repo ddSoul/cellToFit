@@ -17,6 +17,7 @@
 #import "UITableView+FDTemplateLayoutCell.h"
 #import "XLHeader.h"
 
+
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
 #define view_scal (ScreenWidth/1242)
@@ -40,6 +41,7 @@
     self.page = 1;
     [self requestListofPage:@"1"];
     [self createTableView];
+
     
 }
 
