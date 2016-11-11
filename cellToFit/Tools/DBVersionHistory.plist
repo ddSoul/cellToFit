@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>userTable</key>
+		<array>
+			<string>alter table xl_userinfo rename to tempT1</string>
+			<string>CREATE TABLE IF NOT EXISTS xl_test(userId TEXT PRIMARY KEY NOT NULL, nickname TEXT);</string>
+			<string>insert into xl_test(userId,nickname)  select userId,sign from tempT1</string>
+			<string>drop table tempT1</string>
+		</array>
+		<key>friendTable</key>
+		<array>
+			<string>alter table xl_test rename to tempT1</string>
+			<string>CREATE TABLE IF NOT EXISTS xl_test123(iid TEXT PRIMARY KEY NOT NULL, name TEXT)</string>
+			<string>insert into xl_test123(hh,oo)  select name,iid from tempT1</string>
+			<string>drop table tempT1</string>
+		</array>
+		<key>chatTable</key>
+		<array>
+			<string>alter table xl_test rename to tempT1</string>
+			<string>CREATE TABLE IF NOT EXISTS xl_test123(iid TEXT PRIMARY KEY NOT NULL, name TEXT)</string>
+			<string>insert into xl_test123(hh,oo)  select name,iid from tempT1</string>
+			<string>drop table tempT1</string>
+		</array>
+	</dict>
+</array>
+</plist>

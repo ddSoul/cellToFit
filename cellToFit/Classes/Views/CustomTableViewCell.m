@@ -52,7 +52,7 @@
     [self.baseIamgeView addSubview:self.titleLabel];
     
     self.commentButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.commentButton.backgroundColor = [UIColor redColor];
+    self.commentButton.backgroundColor = [UIColor clearColor];
     [self.commentButton addTarget:self action:@selector(test:) forControlEvents:UIControlEventTouchUpInside];
     self.baseIamgeView.userInteractionEnabled = YES;
     [self.baseIamgeView addSubview:self.commentButton];

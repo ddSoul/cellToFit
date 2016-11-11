@@ -10,7 +10,17 @@
 #import "JokListViewController.h"
 #import "ProgressHUD.h"
 #import "ChatViewController.h"
+<<<<<<< Updated upstream
 
+=======
+#import "SearchViewController.h"
+#import "XLDBManageer.h"
+#import "InsertdbViewController.h"
+#import "XYCacheHelper.h"
+#import "NSCache+XYCacheHelper.h"
+#import "GetImageData.h"
+#import "ChartViewController.h"
+>>>>>>> Stashed changes
 
 @interface HomeViewController ()
 - (IBAction)jokButton:(UIButton *)sender;
@@ -58,8 +68,14 @@
 }
 
 - (IBAction)otherButton:(UIButton *)sender {
+<<<<<<< Updated upstream
     [ProgressHUD showSuccessWithString:@"有待完善"];
 
+=======
+//    [ProgressHUD showSuccessWithString:@"有待完善"];
+    ChartViewController *push = [[ChartViewController alloc] init];
+    [self.navigationController pushViewController:push animated:YES];
+>>>>>>> Stashed changes
 }
 
 - (IBAction)dbButton:(UIButton *)sender {

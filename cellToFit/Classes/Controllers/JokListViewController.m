@@ -16,6 +16,9 @@
 #import "Masonry.h"
 #import "UITableView+FDTemplateLayoutCell.h"
 #import "XLHeader.h"
+#import "NSCache+XYCacheHelper.h"
+#import "NetworkingCountTool.h"
+
 
 
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
@@ -33,6 +36,14 @@
 
 @implementation JokListViewController
 
+- (void)viewDidDisappear:(BOOL)animated
+{
+    int count = [NetworkingCountTool get3GFlowIOBytes];
+    long wifiCount = [NetworkingCountTool getWifiInterfaceBytes];
+    NSLog(@"____3G%d___WIFI%ld",count/1024/1024,wifiCount/1024/1024);
+    [super viewDidDisappear:animated];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
@@ -42,6 +53,12 @@
     [self requestListofPage:@"1"];
     [self createTableView];
 
+<<<<<<< Updated upstream
+=======
+    NSString *str = [[NSCache shareManager] objectForKey:@"test"];
+    NSLog(@"___________%@==========test=======",str);
+
+>>>>>>> Stashed changes
     
 }
 
@@ -147,6 +164,7 @@
 
     return cell;
 }
+
 
 
 - (void)didReceiveMemoryWarning {

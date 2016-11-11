@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE06EC071D8FADB700DBD82E /* FMDatabase+helper.m in Sources */ = {isa = PBXBuildFile; fileRef = EE06EC061D8FADB700DBD82E /* FMDatabase+helper.m */; };
+		EE06EC0A1D8FCD0E00DBD82E /* DBVersionUDTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EE06EC091D8FCD0E00DBD82E /* DBVersionUDTool.m */; };
 		EE0C52761D6416DA0035C50F /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0C52751D6416DA0035C50F /* UIView+Extension.m */; };
+
 		EE35E1DC1D7D5B91008C252F /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35E1BC1D7D5B91008C252F /* MKAnnotationView+WebCache.m */; };
 		EE35E1DD1D7D5B91008C252F /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35E1BE1D7D5B91008C252F /* NSData+ImageContentType.m */; };
 		EE35E1DE1D7D5B91008C252F /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35E1C01D7D5B91008C252F /* SDImageCache.m */; };
@@ -52,6 +55,7 @@
 		EE40ECC61D62D6F700CE7A0B /* ChatDataSoure.m in Sources */ = {isa = PBXBuildFile; fileRef = EE40ECC51D62D6F700CE7A0B /* ChatDataSoure.m */; };
 		EE40ECC91D63159200CE7A0B /* OtherChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE40ECC81D63159200CE7A0B /* OtherChatTableViewCell.m */; };
 		EE40ECCC1D6315E500CE7A0B /* MineChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE40ECCB1D6315E500CE7A0B /* MineChatTableViewCell.m */; };
+
 		EE963E601D6C402C00FE88DC /* GetImageData.m in Sources */ = {isa = PBXBuildFile; fileRef = EE963E5F1D6C402C00FE88DC /* GetImageData.m */; };
 		EE972E921D634CBE0050AD92 /* FootToolViews.m in Sources */ = {isa = PBXBuildFile; fileRef = EE972E911D634CBE0050AD92 /* FootToolViews.m */; };
 		EEB0FC031D5DB690000C8524 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB0FC021D5DB690000C8524 /* main.m */; };
@@ -119,7 +123,7 @@
 		EED0B9021D66E6D0003DC0BE /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = EED0B8FA1D66E6D0003DC0BE /* FMDatabasePool.m */; };
 		EED0B9031D66E6D0003DC0BE /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = EED0B8FC1D66E6D0003DC0BE /* FMDatabaseQueue.m */; };
 		EED0B9041D66E6D0003DC0BE /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = EED0B8FF1D66E6D0003DC0BE /* FMResultSet.m */; };
-		EEFE5AB31D7E99CA0098553D /* UITextView+placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFE5AB21D7E99CA0098553D /* UITextView+placeholder.m */; };
+
 		EEFEA3131D8104060034EA46 /* confige.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEFEA3121D8104060034EA46 /* confige.plist */; };
 /* End PBXBuildFile section */
 
@@ -141,8 +145,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE06EC051D8FADB700DBD82E /* FMDatabase+helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FMDatabase+helper.h"; sourceTree = "<group>"; };
+		EE06EC061D8FADB700DBD82E /* FMDatabase+helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FMDatabase+helper.m"; sourceTree = "<group>"; };
+		EE06EC081D8FCD0E00DBD82E /* DBVersionUDTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBVersionUDTool.h; sourceTree = "<group>"; };
+		EE06EC091D8FCD0E00DBD82E /* DBVersionUDTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBVersionUDTool.m; sourceTree = "<group>"; };
 		EE0C52741D6416DA0035C50F /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		EE0C52751D6416DA0035C50F /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+
 		EE35E1BB1D7D5B91008C252F /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		EE35E1BC1D7D5B91008C252F /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		EE35E1BD1D7D5B91008C252F /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -231,6 +240,7 @@
 		EE40ECC81D63159200CE7A0B /* OtherChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherChatTableViewCell.m; sourceTree = "<group>"; };
 		EE40ECCA1D6315E500CE7A0B /* MineChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineChatTableViewCell.h; sourceTree = "<group>"; };
 		EE40ECCB1D6315E500CE7A0B /* MineChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineChatTableViewCell.m; sourceTree = "<group>"; };
+
 		EE963E5E1D6C402C00FE88DC /* GetImageData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetImageData.h; sourceTree = "<group>"; };
 		EE963E5F1D6C402C00FE88DC /* GetImageData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetImageData.m; sourceTree = "<group>"; };
 		EE972E901D634CBE0050AD92 /* FootToolViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootToolViews.h; sourceTree = "<group>"; };
@@ -369,8 +379,7 @@
 		EED0B8FD1D66E6D0003DC0BE /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		EED0B8FE1D66E6D0003DC0BE /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		EED0B8FF1D66E6D0003DC0BE /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		EEFE5AB11D7E99CA0098553D /* UITextView+placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+placeholder.h"; sourceTree = "<group>"; };
-		EEFE5AB21D7E99CA0098553D /* UITextView+placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+placeholder.m"; sourceTree = "<group>"; };
+
 		EEFEA3121D8104060034EA46 /* confige.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = confige.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -405,6 +414,7 @@
 			children = (
 				EE0C52741D6416DA0035C50F /* UIView+Extension.h */,
 				EE0C52751D6416DA0035C50F /* UIView+Extension.m */,
+
 				EEFE5AB11D7E99CA0098553D /* UITextView+placeholder.h */,
 				EEFE5AB21D7E99CA0098553D /* UITextView+placeholder.m */,
 			);
@@ -412,6 +422,7 @@
 			path = cellToFit/Categray;
 			sourceTree = "<group>";
 		};
+
 		EE35E1BA1D7D5B91008C252F /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -643,6 +654,8 @@
 				EEB0FCE21D5DB95E000C8524 /* JokModel.m */,
 				EE40ECC41D62D6F700CE7A0B /* ChatDataSoure.h */,
 				EE40ECC51D62D6F700CE7A0B /* ChatDataSoure.m */,
+				EEFE5AAB1D7E928C0098553D /* Student.h */,
+				EEFE5AAC1D7E928C0098553D /* Student.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -667,6 +680,7 @@
 		EEB0FC3A1D5DB868000C8524 /* Thirds */ = {
 			isa = PBXGroup;
 			children = (
+
 				EE35E1BA1D7D5B91008C252F /* SDWebImage */,
 				EED0B8F41D66E6D0003DC0BE /* Fmdb */,
 				EE40EC671D62AA9B00CE7A0B /* MJRefresh */,
@@ -848,6 +862,12 @@
 		EEB0FCA61D5DB868000C8524 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				EE06EC081D8FCD0E00DBD82E /* DBVersionUDTool.h */,
+				EE06EC091D8FCD0E00DBD82E /* DBVersionUDTool.m */,
+				EEFEA30F1D8101E40034EA46 /* VersionConfigeTool.h */,
+				EEFEA3101D8101E40034EA46 /* VersionConfigeTool.m */,
+				EE35E1A71D7D21E5008C252F /* XLCache */,
+				EED1FDAB1D795EBB006DCBAE /* BNCache */,
 				EE963E5E1D6C402C00FE88DC /* GetImageData.h */,
 				EE963E5F1D6C402C00FE88DC /* GetImageData.m */,
 				EEB0FCE71D5DBA46000C8524 /* UILabel+sizeTofitWdthAndHeigh.h */,
@@ -858,6 +878,7 @@
 				EEB0FCAA1D5DB868000C8524 /* ProgressHUD.m */,
 				EEB0FCAB1D5DB868000C8524 /* XLHttpTool.h */,
 				EEB0FCAC1D5DB868000C8524 /* XLHttpTool.m */,
+
 			);
 			name = Tools;
 			path = cellToFit/Tools;
@@ -879,6 +900,35 @@
 				EED0B8FF1D66E6D0003DC0BE /* FMResultSet.m */,
 			);
 			path = Fmdb;
+			sourceTree = "<group>";
+		};
+		EED1FDAB1D795EBB006DCBAE /* BNCache */ = {
+			isa = PBXGroup;
+			children = (
+				EED1FDAC1D795EBB006DCBAE /* BNCache.h */,
+				EED1FDAD1D795EBB006DCBAE /* BNDiskCache.h */,
+				EED1FDAE1D795EBB006DCBAE /* BNDiskCache.m */,
+				EED1FDAF1D795EBB006DCBAE /* BNMemCache.h */,
+				EED1FDB01D795EBB006DCBAE /* BNMemCache.m */,
+				EED1FDB11D795EBB006DCBAE /* README.md */,
+				EED1FDB21D795EBB006DCBAE /* YYCache */,
+			);
+			path = BNCache;
+			sourceTree = "<group>";
+		};
+		EED1FDB21D795EBB006DCBAE /* YYCache */ = {
+			isa = PBXGroup;
+			children = (
+				EED1FDB31D795EBB006DCBAE /* YYCache.h */,
+				EED1FDB41D795EBB006DCBAE /* YYCache.m */,
+				EED1FDB51D795EBB006DCBAE /* YYDiskCache.h */,
+				EED1FDB61D795EBB006DCBAE /* YYDiskCache.m */,
+				EED1FDB71D795EBB006DCBAE /* YYKVStorage.h */,
+				EED1FDB81D795EBB006DCBAE /* YYKVStorage.m */,
+				EED1FDB91D795EBB006DCBAE /* YYMemoryCache.h */,
+				EED1FDBA1D795EBB006DCBAE /* YYMemoryCache.m */,
+			);
+			path = YYCache;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -985,6 +1035,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE60CD4D1D911BE80042BAB8 /* DBVersionHistory.plist in Resources */,
 				EEB0FCDC1D5DB868000C8524 /* SVProgressHUD.bundle in Resources */,
 				EEB0FCD91D5DB868000C8524 /* LICENSE.txt in Resources */,
 				EE40ECA41D62AA9B00CE7A0B /* MJRefresh.bundle in Resources */,
@@ -1024,12 +1075,17 @@
 				EE35E1E41D7D5B91008C252F /* SDWebImagePrefetcher.m in Sources */,
 				EE40EC971D62AA9B00CE7A0B /* MJRefreshBackFooter.m in Sources */,
 				EE40ECA51D62AA9B00CE7A0B /* MJRefreshConst.m in Sources */,
+				EED1FD891D7908A9006DCBAE /* XYCacheHelper.m in Sources */,
 				EE40ECBA1D62D1EC00CE7A0B /* JokListViewController.m in Sources */,
+				EED1FDC11D795EBB006DCBAE /* YYMemoryCache.m in Sources */,
+				EEFEA3111D8101E40034EA46 /* VersionConfigeTool.m in Sources */,
+				EED1FD8C1D790B77006DCBAE /* NSCache+XYCacheHelper.m in Sources */,
 				EED0B9001D66E6D0003DC0BE /* FMDatabase.m in Sources */,
 				EEB0FCE31D5DB95E000C8524 /* JokModel.m in Sources */,
 				EEB0FCE01D5DB868000C8524 /* XLHttpTool.m in Sources */,
 				EE40EC9D1D62AA9B00CE7A0B /* MJRefreshAutoStateFooter.m in Sources */,
 				EE35E1EB1D7D5B91008C252F /* UIView+WebCacheOperation.m in Sources */,
+
 				EEB0FCBB1D5DB868000C8524 /* UIImageView+AFNetworking.m in Sources */,
 				EEB0FCC81D5DB868000C8524 /* MASViewAttribute.m in Sources */,
 				EE40EC9E1D62AA9B00CE7A0B /* MJRefreshBackGifFooter.m in Sources */,
@@ -1040,17 +1096,23 @@
 				EEB0FCB21D5DB868000C8524 /* AFURLResponseSerialization.m in Sources */,
 				EEB0FCDE1D5DB868000C8524 /* AXHttpTool.m in Sources */,
 				EEB0FCDA1D5DB868000C8524 /* README.md in Sources */,
+
 				EE35E1DC1D7D5B91008C252F /* MKAnnotationView+WebCache.m in Sources */,
 				EED0B9041D66E6D0003DC0BE /* FMResultSet.m in Sources */,
 				EE40EC9F1D62AA9B00CE7A0B /* MJRefreshBackNormalFooter.m in Sources */,
 				EEB0FCD81D5DB868000C8524 /* NSString+MJExtension.m in Sources */,
+				EED1FDBC1D795EBB006DCBAE /* BNMemCache.m in Sources */,
+				EE35E1B91D7D50CA008C252F /* UIImageView+XLCache.m in Sources */,
 				EEB0FCBC1D5DB868000C8524 /* UIProgressView+AFNetworking.m in Sources */,
 				EE40ECA61D62AA9B00CE7A0B /* NSBundle+MJRefresh.m in Sources */,
 				EE40ECA21D62AA9B00CE7A0B /* MJRefreshNormalHeader.m in Sources */,
 				EEB0FCB71D5DB868000C8524 /* AFImageDownloader.m in Sources */,
 				EEB0FCB61D5DB868000C8524 /* AFAutoPurgingImageCache.m in Sources */,
+
 				EE35E1DD1D7D5B91008C252F /* NSData+ImageContentType.m in Sources */,
 				EE40ECA31D62AA9B00CE7A0B /* MJRefreshStateHeader.m in Sources */,
+				EED1FDBD1D795EBB006DCBAE /* README.md in Sources */,
+				EE2788031D87D6F20091504F /* JKScrollFocus.m in Sources */,
 				EEB0FC061D5DB690000C8524 /* AppDelegate.m in Sources */,
 				EE40ECCC1D6315E500CE7A0B /* MineChatTableViewCell.m in Sources */,
 				EE35E1E61D7D5B91008C252F /* UIImage+GIF.m in Sources */,
@@ -1059,6 +1121,7 @@
 				EEB0FCBA1D5DB868000C8524 /* UIButton+AFNetworking.m in Sources */,
 				EEB0FCD51D5DB868000C8524 /* NSObject+MJCoding.m in Sources */,
 				EEB0FCB91D5DB868000C8524 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+
 				EEB0FCAE1D5DB868000C8524 /* AFHTTPSessionManager.m in Sources */,
 				EE40ECB31D62D19000CE7A0B /* HomeViewController.m in Sources */,
 				EE40ECA91D62AA9B00CE7A0B /* UIView+MJExtension.m in Sources */,
@@ -1066,20 +1129,26 @@
 				EE35E1E11D7D5B91008C252F /* SDWebImageDownloader.m in Sources */,
 				EE35E1E31D7D5B91008C252F /* SDWebImageManager.m in Sources */,
 				EEB0FCC51D5DB868000C8524 /* MASConstraint.m in Sources */,
+				EED28E881D864E39005A374A /* NetworkingCountTool.m in Sources */,
 				EE40ECA81D62AA9B00CE7A0B /* UIScrollView+MJRefresh.m in Sources */,
 				EEB0FCE91D5DBA46000C8524 /* UILabel+sizeTofitWdthAndHeigh.m in Sources */,
 				EE40ECC61D62D6F700CE7A0B /* ChatDataSoure.m in Sources */,
 				EE40ECC91D63159200CE7A0B /* OtherChatTableViewCell.m in Sources */,
 				EEB0FCC11D5DB868000C8524 /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				EE963E601D6C402C00FE88DC /* GetImageData.m in Sources */,
+				EE35E1AE1D7D21E5008C252F /* XLCache.m in Sources */,
+				EE35E1B61D7D4F3F008C252F /* LDSYImageDownloader.m in Sources */,
 				EEB0FCC91D5DB868000C8524 /* MASViewConstraint.m in Sources */,
 				EEB0FCCE1D5DB868000C8524 /* README.md in Sources */,
 				EEB0FCCC1D5DB868000C8524 /* View+MASAdditions.m in Sources */,
 				EE35E1E81D7D5B91008C252F /* UIImage+WebP.m in Sources */,
 				EE35E1E91D7D5B91008C252F /* UIImageView+HighlightedWebCache.m in Sources */,
+
 				EED0B9011D66E6D0003DC0BE /* FMDatabaseAdditions.m in Sources */,
 				EEB0FCC61D5DB868000C8524 /* MASConstraintMaker.m in Sources */,
 				EEB0FCBD1D5DB868000C8524 /* UIRefreshControl+AFNetworking.m in Sources */,
+				EED1FDBB1D795EBB006DCBAE /* BNDiskCache.m in Sources */,
+				EEFE5AAD1D7E928C0098553D /* Student.m in Sources */,
 				EE40EC991D62AA9B00CE7A0B /* MJRefreshFooter.m in Sources */,
 				EE40EC981D62AA9B00CE7A0B /* MJRefreshComponent.m in Sources */,
 				EEB0FCDB1D5DB868000C8524 /* SVIndefiniteAnimatedView.m in Sources */,
@@ -1093,12 +1162,16 @@
 				EEB0FCD31D5DB868000C8524 /* MJPropertyType.m in Sources */,
 				EEB0FCB31D5DB868000C8524 /* AFURLSessionManager.m in Sources */,
 				EE40EC9C1D62AA9B00CE7A0B /* MJRefreshAutoNormalFooter.m in Sources */,
+				EE06EC0A1D8FCD0E00DBD82E /* DBVersionUDTool.m in Sources */,
 				EEB0FCCB1D5DB868000C8524 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				EE35E1AF1D7D21E5008C252F /* XLDiskCache.m in Sources */,
 				EEB0FCC21D5DB868000C8524 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */,
 				EE35E1E01D7D5B91008C252F /* SDWebImageDecoder.m in Sources */,
+
 				EEB0FCE61D5DB97B000C8524 /* CustomTableViewCell.m in Sources */,
 				EE972E921D634CBE0050AD92 /* FootToolViews.m in Sources */,
 				EED0B9021D66E6D0003DC0BE /* FMDatabasePool.m in Sources */,
+				EED1FDC01D795EBB006DCBAE /* YYKVStorage.m in Sources */,
 				EEB0FCBF1D5DB868000C8524 /* UITableView+FDIndexPathHeightCache.m in Sources */,
 				EEB0FCD41D5DB868000C8524 /* NSObject+MJClass.m in Sources */,
 				EE40ECAC1D62B02000CE7A0B /* XLHeader.m in Sources */,
@@ -1115,7 +1188,9 @@
 				EEB0FCB81D5DB868000C8524 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				EEB0FCCD1D5DB868000C8524 /* ViewController+MASAdditions.m in Sources */,
 				EE40ECA01D62AA9B00CE7A0B /* MJRefreshBackStateFooter.m in Sources */,
+				EE35E1B51D7D4F3F008C252F /* LDSDownloaderOperation.m in Sources */,
 				EEB0FCD21D5DB868000C8524 /* MJPropertyKey.m in Sources */,
+				EED1FDBF1D795EBB006DCBAE /* YYDiskCache.m in Sources */,
 				EE40EC961D62AA9B00CE7A0B /* MJRefreshAutoFooter.m in Sources */,
 				EE35E1E51D7D5B91008C252F /* UIButton+WebCache.m in Sources */,
 				EEB0FCB11D5DB868000C8524 /* AFURLRequestSerialization.m in Sources */,
@@ -1246,6 +1321,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = cellToFit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.miaowu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1260,6 +1336,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = cellToFit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.miaowu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
