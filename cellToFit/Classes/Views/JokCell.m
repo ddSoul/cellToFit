@@ -6,7 +6,7 @@
 //  Copyright © 2016年 dxl. All rights reserved.
 //
 
-#import "CustomTableViewCell.h"
+#import "JokCell.h"
 #import "JokModel.h"
 #import "UILabel+sizeTofitWdthAndHeigh.h"
 #import "Masonry.h"
@@ -15,7 +15,7 @@
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
 #define view_scal (ScreenWidth/1242)
 
-@interface CustomTableViewCell ()
+@interface JokCell ()
 
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UIImageView *baseIamgeView;
@@ -24,7 +24,7 @@
 
 @end
 
-@implementation CustomTableViewCell
+@implementation JokCell
 
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -33,7 +33,6 @@
     if (self)
     {
         [self createControls];
-        [self setAutoLayout];
     }
     return self;
 }
@@ -51,51 +50,24 @@
     self.titleLabel.numberOfLines = 0;
     [self.baseIamgeView addSubview:self.titleLabel];
     
-    self.commentButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.commentButton.backgroundColor = [UIColor clearColor];
-    [self.commentButton addTarget:self action:@selector(test:) forControlEvents:UIControlEventTouchUpInside];
-    self.baseIamgeView.userInteractionEnabled = YES;
-    [self.baseIamgeView addSubview:self.commentButton];
-    
-}
-
-- (void)test:(UIButton *)sender
-{
-    if (self.CommentBtnClickBlock) {
-        self.CommentBtnClickBlock(sender,self.indexPath);
-    }
-
-}
-
-- (void)setModel:(Contentlist *)model indexPath:(NSIndexPath *)indexpath
-{
-    self.indexPath = indexpath;
-    self.titleLabel.text = model.text;
-}
-
-- (void)setAutoLayout
-{
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make){
         make.left.mas_equalTo(self.baseIamgeView).offset(100*view_scal);
         make.top.mas_equalTo(self.baseIamgeView).offset(60*view_scal);
         make.right.bottom.mas_equalTo(self.baseIamgeView).offset(-60*view_scal);
     }];
     
-    [self.commentButton mas_makeConstraints:^(MASConstraintMaker *make){
-        make.width.mas_equalTo(100*view_scal);
-        make.top.mas_equalTo(self.baseIamgeView).offset(60*view_scal);
-        make.right.bottom.mas_equalTo(self.baseIamgeView).offset(-60*view_scal);
-    }];
-
     [self.baseIamgeView mas_makeConstraints:^(MASConstraintMaker *make){
         make.top.left.mas_equalTo(60*view_scal);
         make.right.bottom.mas_equalTo(-60*view_scal);
     }];
-    
+
     
 }
 
-
+- (void)setModel:(Contentlist *)model
+{
+    self.titleLabel.text = model.text;
+}
 - (void)awakeFromNib {
     // Initialization code
 }

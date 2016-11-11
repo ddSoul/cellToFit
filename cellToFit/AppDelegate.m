@@ -8,13 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HomeViewController.h"
-<<<<<<< Updated upstream
 
-=======
-#import "XLDBManageer.h"
-#import "UserInfodbManager.h"
-#import "NetworkingCountTool.h"
->>>>>>> Stashed changes
 
 @interface AppDelegate ()
 
@@ -24,11 +18,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    int count = [NetworkingCountTool get3GFlowIOBytes];
-    long wifiCount = [NetworkingCountTool getWifiInterfaceBytes];
-    NSLog(@"____3G%d___WIFI%ld",count/1024/1024,wifiCount/1024/1024);
-    
+      
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
