@@ -31,7 +31,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="53" id="MTB-1c-LJS"/>
                     </constraints>
-                    <state key="normal" title="？？">
+                    <state key="normal" title="可展开的cell?">
                         <color key="titleColor" red="1" green="0.35629516989999999" blue="0.36289185000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>

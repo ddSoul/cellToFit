@@ -31,8 +31,6 @@
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 100*view_scal, ScreenWidth, 100*view_scal)];
     label.backgroundColor = [UIColor greenColor];
     [self addSubview:label];
-
-    
     NSLog(@"world");
 }
 

@@ -110,7 +110,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    JokCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    JokCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"
+                                                    forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.model = self.allMutableArray[indexPath.row];
     

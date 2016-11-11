@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "JokListViewController.h"
+#import "ExpansionViewController.h"
 #import "ProgressHUD.h"
 
 @interface HomeViewController ()
@@ -39,7 +40,9 @@
 
 - (IBAction)chatButton:(UIButton *)sender {
     
-    [ProgressHUD showSuccessWithString:@"有待完善"];
+    ExpansionViewController *push = [[ExpansionViewController alloc] init];
+    [self.navigationController pushViewController:push animated:YES];
+
     
 }
 
