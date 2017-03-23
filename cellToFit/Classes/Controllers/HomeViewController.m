@@ -29,6 +29,7 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+    /** xin pei zhi github commit test*/
     // Dispose of any resources that can be recreated.
 }
 
