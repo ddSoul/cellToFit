@@ -7,15 +7,18 @@
 //
 
 #import "JokListViewController.h"
-#import "JokModel.h"
+
 #import "JokCell.h"
+#import "XLHeader.h"
+
+#import "JokModel.h"
 #import "AXHttpTool.h"
 #import "MJExtension.h"
 #import "MJRefresh.h"
 #import "ProgressHUD.h"
 #import "Masonry.h"
 #import "UITableView+FDTemplateLayoutCell.h"
-#import "XLHeader.h"
+
 
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -25,13 +28,14 @@
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *allMutableArray;
+
 @property (nonatomic, assign) NSInteger page;
 
 @end
 
 @implementation JokListViewController
 
-#pragma mark - viewload
+#pragma mark - life cycle 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configeViewController];
