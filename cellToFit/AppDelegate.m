@@ -25,6 +25,8 @@
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[HomeViewController alloc] init]];
     [self.window setRootViewController:nav];
     
+    NSLog(@"66666");
+    
     // Override point for customization after application launch.
     return YES;
 }
