@@ -26,6 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"____homeViewController");
 }
 
 - (void)didReceiveMemoryWarning {
